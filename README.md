@@ -1,38 +1,33 @@
-Lab22
-=====
 public class Testprogram {
 
-  public static void main(String args[]) {
+	public static void main(String args[]) {
 		Dice Object = new Dice();
-		
-		for(int x=0;x<10;x++)
-		Object.RollDice();
 
-		for(int x=0;x<10;x++)	
-		System.out.println(Object.RollHistoryArray()[x]);
-		
-	
-		
-		
-	
+		for (int x = 0; x < 10; x++)
+			Object.RollDice();
+
+		for (int x = 0; x < 10; x++)
+			System.out.println(Object.RollHistoryArray()[x]);
+
 	}
 
 }
 
-//System.out.println("public dice count is\t" + Object.RollCount2());
+// System.out.println("public dice count is\t" + Object.RollCount2());
 //
-//// implemented class triple dice and testing program
-//TripleDice nobject = new TripleDice(3, 6);
-//System.out.println("override and the triple dice value is\t"
-//		+ nobject.RollDice());
-//System.out.println("triple dice count is\t" + nobject.RollCount3());
+// // implemented class triple dice and testing program
+// TripleDice nobject = new TripleDice(3, 6);
+// System.out.println("override and the triple dice value is\t"
+// + nobject.RollDice());
+// System.out.println("triple dice count is\t" + nobject.RollCount3());
 //
-//System.out.println("This causes program to reset triple dice rolled\t"
-//		+ nobject.reset());
+// System.out.println("This causes program to reset triple dice rolled\t"
+// + nobject.reset());
+
 
 
 public class TripleDice extends Dice {
-  int num, cara;
+	int num, cara;
 	int total3;
 
 	public TripleDice(int dinum, int six) {
@@ -62,10 +57,11 @@ public class TripleDice extends Dice {
 
 
 
+
 public class Dice {
-  static int total = 0;
+	static int total = 0;
 	int total2 = 0;
-	int a[]=new int[10];
+	int a[] = new int[10];
 	int x = 0;
 
 	static int RollDice(int NumOfDice, int sidesofdice) {
@@ -77,9 +73,9 @@ public class Dice {
 	}
 
 	public int RollDice() {
-		
+
 		total2++;
-		a[x]= (1 + (int) (Math.random() * 6));
+		a[x] = (1 + (int) (Math.random() * 6));
 		return a[x++];
 	}
 
@@ -97,7 +93,9 @@ public class Dice {
 	public int RollCount2() {
 		return total2;
 
-	}public int[] RollHistoryArray(){
+	}
+
+	public int[] RollHistoryArray() {
 		return a;
 	}
 
